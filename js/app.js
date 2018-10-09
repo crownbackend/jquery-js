@@ -16,5 +16,9 @@ $(document).ready(function(){
 
     teste('je suis moi');
 
+    $("#btnClick").click(function(){
+        let value = $("#filed").val();
+        console.log(value);
+    });
 
 });
