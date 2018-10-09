@@ -21,6 +21,7 @@ $(document).ready(function(){
         {
             $("#error").slideUp('slow');
             $('#filed').val('');
+
             $("#result").append("<li class='select list-group-item'>" + value +
             "<button class='delete btn btn-danger'> x</button>" +
             "</li>");
@@ -30,6 +31,7 @@ $(document).ready(function(){
            $("#error").slideDown('slow');
         }
     });
+
 
     $('#result').on('click', '.delete', function () {
         $(this).parent().remove();
