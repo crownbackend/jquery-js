@@ -19,7 +19,7 @@ $(document).ready(function(){
         $("#result").empty();
         for(let i = 0; i < tasks.length; i++)
         {
-            $("#result").append("<li class='select list-group-item' data-target='+ i +'><button class='delete btn btn-danger'> x</button>" +
+            $("#result").append("<li class='select list-group-item' data-target='+ i +'>" + tasks[i] + "<button class='delete btn btn-danger'> x</button>" +
                 "</li>");
         }
 
