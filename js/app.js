@@ -1,10 +1,5 @@
-$(document).ready(function(){
 
     $("#target").append('lorem <br>');
-
-    $("#btnClick").on('click', function(){
-        $("#btnClick").addClass("btn btn-danger");
-    });
 
     let texte = "recoucou";
     $("#target").append(texte + " ça va toi ?");
@@ -18,11 +13,16 @@ $(document).ready(function(){
 
     $("#btnClick").click(function(){
         let value = $("#filed").val();
-        $("#result").append(value + "<br>");
+        let result = $("#result").append(value + "<br>");
+
+        $('#btnRemove').click(function () {
+            
+            result.remove();
+        });
 
     });
 
 
 
 
-});
+
