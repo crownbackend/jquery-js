@@ -18,7 +18,11 @@ $(document).ready(function(){
 
     $("#btnClick").click(function(){
         let value = $("#filed").val();
-        $("#result").html(value + "<br>");
+        $("#result").append(value + "<br>");
+
     });
+
+
+
 
 });
