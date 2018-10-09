@@ -6,9 +6,15 @@ $(document).ready(function(){
         $("#btnClick").addClass("btn btn-danger");
     });
 
-
     let texte = "recoucou";
     $("#target").append(texte + " ça va toi ?");
+
+    function teste(args)
+    {
+        console.log('salut à tous ' + args);
+    }
+
+    teste('je suis moi');
 
 
 });
