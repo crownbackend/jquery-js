@@ -1,9 +1,17 @@
+
 $(document).ready(function(){
 
     $("#target").append('lorem <br>');
 
     let tasks;
-    tasks = JSON.parse(localStorage.getItem("tasks"));
+    if(localStorage.getItem('tasks'))
+    {
+        tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+    else
+    {
+        tasks = [];
+    }
 
     function showTasks()
     {
@@ -22,12 +30,13 @@ $(document).ready(function(){
         let value = $("#filed").val();
         if(value.length > 0)
         {
+            tasks.push(value);
             $("#error").slideUp('slow');
             $('#filed').val('');
             $("#result").append("<li class='select list-group-item'>" + value +
             "<button class='delete btn btn-danger'> x</button>" +
             "</li>");
-            tasks.push(value);
+            console.log(tasks);
             showTasks();
         }
         else
