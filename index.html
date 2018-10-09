@@ -12,7 +12,10 @@
 
 <div class="container">
     <div id="target"></div>
-    <input type="text" id="filed">
+    <div class="form-group">
+    <input type="text" id="filed" class="form-control">
+        <div id="error" style="color: red; display: none;">Erreur : champs vide</div>
+    </div>
     <button class="btn btn-primary" id="btnClick">Envoyer</button>
     <button class="btn btn-danger" id="btnRemove">Supprimer</button>
     <br />
