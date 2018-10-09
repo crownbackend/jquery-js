@@ -1,3 +1,4 @@
+$(document).ready(function(){
 
     $("#target").append('lorem <br>');
 
@@ -13,15 +14,18 @@
 
     $("#btnClick").click(function(){
         let value = $("#filed").val();
-        let result = $("#result").append(value + "<br>");
-
-        $('#btnRemove').click(function () {
-            
-            result.remove();
-        });
-
+        $('#filed').val('');
+        $("#result").append("<li class='list-group-item'>" +
+            "<button class='.delete btn btn-danger'>"+ value +"</button>" +
+            "</li>");
     });
 
+    $('#result').on('click', '.delete', function () {
+        
+    });
+
+
+});
 
 
 
