@@ -18,7 +18,7 @@ $(document).ready(function(){
 
     $("#btnClick").click(function(){
         let value = $("#filed").val();
-        console.log(value);
+        $("#result").html(value + "<br>");
     });
 
 });
