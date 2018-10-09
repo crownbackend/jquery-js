@@ -13,18 +13,30 @@ $(document).ready(function(){
     teste('je suis moi');
 
 
+    let tasks = [];
+    function showTasks()
+    {
+        $("#result").empty();
+        for(let i = 0; i < tasks.length; i++)
+        {
+            $("#result").append("<li class='select list-group-item' data-target='+ i +'><button class='delete btn btn-danger'> x</button>" +
+                "</li>");
+        }
+
+    }
     $("#btnClick").click(function(){
 
         let value = $("#filed").val();
-
         if(value.length > 0)
         {
+
+            tasks.push(value);
             $("#error").slideUp('slow');
             $('#filed').val('');
-
             $("#result").append("<li class='select list-group-item'>" + value +
             "<button class='delete btn btn-danger'> x</button>" +
             "</li>");
+            showTasks();
         }
         else
         {
@@ -35,6 +47,8 @@ $(document).ready(function(){
 
     $('#result').on('click', '.delete', function () {
         $(this).parent().remove();
+        tasks.splice($(this).data('target'), 1)
+        showTasks();
     });
 
     $("#btnRemove").on('click', function () {
