@@ -15,13 +15,17 @@ $(document).ready(function(){
     $("#btnClick").click(function(){
         let value = $("#filed").val();
         $('#filed').val('');
-        $("#result").append("<li class='list-group-item'>" +
-            "<button class='.delete btn btn-danger'>"+ value +"</button>" +
+        $("#result").append("<li class='list-group-item'>" + value +
+            "<button class='delete btn btn-danger'> x</button>" +
             "</li>");
     });
 
     $('#result').on('click', '.delete', function () {
-        
+        this.parentElement.remove();
+    });
+    
+    $("#btnRemove").on('click', function () {
+        $("#result").remove();
     });
 
 
